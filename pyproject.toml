@@ -1,0 +1,16 @@
+[tool.black]
+line-length = 125
+skip-string-normalization = true
+
+[tool.pyright]
+exclude = [
+    "**/__pycache__",
+    "build",
+    "dist",
+    "venv",
+    "tests",
+]
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportUnusedImport = "error"
+pythonVersion = "3.8"
+typeCheckingMode = "basic"
