@@ -181,7 +181,7 @@ class Admin(commands.Cog):
         elif isinstance(option, int):
             guild = self.bot.get_guild(option)
             if guild is None:
-                return await ctx.reply("Invalid guild given!")
+                return await ctx.reply(f"{Emoji.x} Invalid guild given!")
 
             await self.bot.tree.sync(guild=guild)
             await ctx.reply(f"Done! Synced all guild commands in `{guild.name}`!", mention_author=False)  # type: ignore
